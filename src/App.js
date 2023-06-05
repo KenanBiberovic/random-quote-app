@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 
 class App extends React.Component {
@@ -17,15 +17,6 @@ class App extends React.Component {
     fetch("https://js-course-server.onrender.com/quotes/get-random-quote")
       .then((res) => res.json())
       .then((data) => {
-        /*
-        data = {
-            "quoteId": "63dfc2b46a91670035c4ec6a",
-            "quoteText": "one day or day one ",
-            "quoteAuthor": "DZ",
-            "quoteSource": "--",
-            "likes": 6
-        }
-        */
         this.setState({
           text: data.quoteText,
           author: data.quoteAuthor,
